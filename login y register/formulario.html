@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crear cuenta</title>
+  <link rel="stylesheet" href="formulario.css">
+</head>
+<body class="pagina-registro">
+
+  <form id="registro" action="logica_register.php" method="post" novalidate>
+    <h1>Crear cuenta</h1>
+    <p class="sub">Completá tus datos para registrarte.</p>
+
+    <div class="fila">
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" autocomplete="given-name" required>
+      </div>
+      <div class="campo">
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" autocomplete="family-name" required>
+      </div>
+    </div>
+
+    <div class="campo">
+      <label for="gmail">Correo Gmail</label>
+      <input type="email" id="gmail" name="gmail" placeholder="usuario@gmail.com" autocomplete="email" required>
+    </div>
+
+    <div class="campo">
+      <label for="contrasena">Contraseña</label>
+      <input type="password" id="contrasena" name="contrasena" minlength="8" autocomplete="new-password" required>
+      <p class="ayuda">Mínimo 8 caracteres.</p>
+    </div>
+
+    <div class="campo">
+      <label for="confirmar">Confirmar contraseña</label>
+      <input type="password" id="confirmar" name="confirmar" autocomplete="new-password" required>
+    </div>
+
+    <p id="mensaje" role="alert"></p>
+
+    <button type="submit">Crear cuenta</button>
+  </form>
+
+  <script>
+    const form = document.getElementById("registro");
+    const mensaje = document.getElementById("mensaje");
+
+    function error(e, texto) {
+      e.preventDefault();
+      mensaje.textContent = texto;
+      mensaje.className = "error";
+    }
+
+    form.addEventListener("submit", function (e) {
+      const nombre = form.nombre.value.trim();
+      const apellido = form.apellido.value.trim();
+      const gmail = form.gmail.value.trim();
+      const contrasena = form.contrasena.value;
+      const confirmar = form.confirmar.value;
+
+      if (!nombre || !apellido || !gmail || !contrasena || !confirmar) {
+        return error(e, "Completá todos los campos.");
+      }
+      if (!/^[^\s@]+@gmail\.com$/i.test(gmail)) {
+        return error(e, "Ingresá un correo que termine en @gmail.com.");
+      }
+      if (contrasena.length < 8) {
+        return error(e, "La contraseña debe tener al menos 8 caracteres.");
+      }
+      if (contrasena !== confirmar) {
+        return error(e, "Las contraseñas no coinciden.");
+      }
+
+      // Todo OK: no se frena el evento y el formulario se envía por POST a logica_register.php
+    });
+  </script>
+
+</body>
+</html>

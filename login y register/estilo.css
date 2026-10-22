@@ -1,0 +1,210 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff5f8;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ff8fab;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  letter-spacing: 3px;
+}
+
+nav {
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 2px solid #ffc2d1;
+}
+
+nav a {
+  margin: 10px;
+  text-decoration: none;
+  color: #ff4d6d;
+  font-weight: bold;
+}
+
+h2 {
+  color: #ff4d6d;
+  margin-left: 20px;
+  margin-top: 30px;
+  border-left: 5px solid #ff8fab;
+  padding-left: 10px;
+}
+
+table {
+  width: 90%;
+  margin: 10px auto;
+  background-color: white;
+  border-collapse: collapse;
+  box-shadow: 0px 2px 5px #ffc2d1;
+}
+
+th {
+  background-color: #ff8fab;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ffc2d1;
+}
+
+tr:hover {
+  background-color: #fff0f3;
+}
+
+footer {
+  background-color: #ff8fab;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+/* Estilos exclusivos de formulario.html.
+   Todo está acotado a la clase .pagina-registro (puesta en el <body>)
+   para que no afecte a otros archivos HTML de tu proyecto. */
+
+.pagina-registro {
+  --fondo: #eef2f6;
+  --tarjeta: #ffffff;
+  --texto: #1c2733;
+  --suave: #5b6b7b;
+  --borde: #c9d3dd;
+  --acento: #1f5fbf;
+  --error: #b42318;
+  --ok: #1a7f4b;
+
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.pagina-registro *,
+.pagina-registro *::before,
+.pagina-registro *::after {
+  box-sizing: border-box;
+}
+
+.pagina-registro form {
+  width: 100%;
+  max-width: 420px;
+  background: var(--tarjeta);
+  padding: 32px;
+  border-radius: 12px;
+  border: 1px solid var(--borde);
+}
+
+.pagina-registro h1 {
+  margin: 0 0 4px;
+  font-size: 1.5rem;
+}
+
+.pagina-registro .sub {
+  margin: 0 0 24px;
+  color: var(--suave);
+  font-size: 0.95rem;
+}
+
+.pagina-registro .fila {
+  display: flex;
+  gap: 12px;
+}
+
+.pagina-registro .fila .campo {
+  flex: 1;
+  min-width: 0;
+}
+
+.pagina-registro .campo {
+  margin-bottom: 16px;
+}
+
+.pagina-registro label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.pagina-registro input {
+  width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--texto);
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+}
+
+.pagina-registro input:focus-visible {
+  outline: 3px solid rgba(31, 95, 191, 0.35);
+  border-color: var(--acento);
+}
+
+.pagina-registro .ayuda {
+  margin: 6px 0 0;
+  font-size: 0.8rem;
+  color: var(--suave);
+}
+
+.pagina-registro #mensaje {
+  min-height: 1.2em;
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+}
+
+.pagina-registro #mensaje.error {
+  color: var(--error);
+}
+
+.pagina-registro #mensaje.ok {
+  color: var(--ok);
+}
+
+.pagina-registro button {
+  width: 100%;
+  padding: 12px;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: var(--acento);
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.pagina-registro button:hover {
+  background: #184e9c;
+}
+
+.pagina-registro button:focus-visible {
+  outline: 3px solid rgba(31, 95, 191, 0.35);
+  outline-offset: 2px;
+}
+
+@media (max-width: 440px) {
+  .pagina-registro .fila {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .pagina-registro form {
+    padding: 24px;
+  }
+}

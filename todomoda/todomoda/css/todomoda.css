@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5f8;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff8fab;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    letter-spacing: 3px;
+}
+
+header h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+header p {
+    margin: 6px 0 0;
+}
+
+nav {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid #ffc2d1;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: #ff4d6d;
+    font-weight: bold;
+    display: inline-block;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #ff4d6d;
+    margin-left: 20px;
+    margin-top: 30px;
+    border-left: 5px solid #ff8fab;
+    padding-left: 10px;
+}
+
+.centro {
+    text-align: center;
+}
+
+.icono {
+    width: 110px;
+    height: 110px;
+}
+
+table {
+    width: 90%;
+    margin: 10px auto;
+    background-color: white;
+    border-collapse: collapse;
+    box-shadow: 0px 2px 5px #ffc2d1;
+}
+
+th {
+    background-color: #ff8fab;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ffc2d1;
+}
+
+tr:hover {
+    background-color: #fff0f3;
+}
+
+/* Tarjetas del inicio */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 16px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    color: #ff4d6d;
+    box-shadow: 0px 2px 5px #ffc2d1;
+    transition: transform 0.15s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card img {
+    width: 100%;
+    max-width: 110px;
+}
+
+.card h3 {
+    font-size: 16px;
+    margin: 8px 0 4px;
+}
+
+.card p {
+    margin: 0;
+    color: #888;
+    font-size: 13px;
+}
+
+/* Formularios y mensajes */
+.caja {
+    background-color: white;
+    max-width: 380px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 5px #ffc2d1;
+}
+
+.caja h2 {
+    margin: 0 0 15px 0;
+}
+
+.caja input,
+.caja button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 6px 0;
+    padding: 10px;
+    border: 1px solid #ffc2d1;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.caja button,
+.boton {
+    background-color: #ff8fab;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.caja button:hover,
+.boton:hover {
+    background-color: #ff4d6d;
+}
+
+.error {
+    color: #b00020;
+    font-weight: bold;
+}
+
+.ok {
+    color: #1b7f3b;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #ff8fab;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.etiqueta {
+    color: #ff4d6d;
+    font-weight: bold;
+}
+
+table a {
+    color: #ff4d6d;
+    font-weight: bold;
+    text-decoration: none;
+}
